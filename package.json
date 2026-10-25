@@ -5,7 +5,17 @@
   "main": "app.js",
   "scripts": {
     "lint": "eslint .",
-    "format": "prettier --check ."
+    "format": "prettier --check .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.{html,css,json,md}": [
+      "prettier --check"
+    ]
   },
   "repository": {
     "type": "git",
